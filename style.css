@@ -1,0 +1,159 @@
+/* ALL OPEN */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ALL CLOSE */
+
+/* BODY OPEN */
+
+body {
+  height: 5000px;
+}
+
+nav {
+  padding: 1rem 7%;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+/* BODY CLOSE */
+
+/* NAVBAR OPEN */
+
+.navbar {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ee9322;
+  position: fixed;
+  border-bottom: 0.2rem solid #000;
+}
+
+.navbar .header h1 {
+  font-family: "Kalam", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.navbar .list {
+  margin-left: 30rem;
+}
+
+.navbar .list a {
+  margin: 0 1.5rem;
+  display: inline-block;
+  color: #fff;
+}
+
+.navbar .list a:hover {
+  color: #000;
+}
+
+.navbar .list a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid #000;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .list a:hover::after {
+  transform: scaleX(100%);
+}
+
+.navbar .icon .menu-btn {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar .icon .menu-btn:hover {
+  color: #000;
+}
+
+/* NAVBAR CLOSE */
+
+/* RESPONSIVE */
+
+/* TABLET MODE OPEN */
+
+@media (max-width: 768px) {
+  /* ALL OPEN */
+
+  html {
+    font-size: 85%;
+  }
+
+  /* ALL CLOSE */
+
+  /* NAVBAR OPEN */
+
+  .navbar .list {
+    width: 35vw;
+    min-height: 100vh;
+    padding: 2rem 0 0 2rem;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #d6913c;
+    display: flex;
+    flex-direction: column;
+    border-top: 0.2rem solid #000;
+    border-left: 0.2rem solid #000;
+    transition: 0.2s linear;
+  }
+
+  .navbar .list.slide-navbar {
+    right: 0;
+  }
+
+  .navbar .list a {
+    width: fit-content;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+  }
+
+  .navbar .list a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .icon .menu-btn {
+    display: block;
+  }
+  /* NAVBAR CLOSE */
+}
+/* TABLET MODE CLOSE */
+
+/* MOBILE OPEN */
+
+@media (max-width: 450px) {
+  /* ALL OPEN */
+
+  html {
+    font-size: 70%;
+  }
+
+  /* ALL CLOSE */
+
+  /* NAVBAR OPEN */
+
+  .navbar .list {
+    width: 40vw;
+  }
+  /* NAVBAR CLOSE */
+}
+/* MOBILE CLOSE */
