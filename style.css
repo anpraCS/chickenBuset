@@ -7,6 +7,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* ALL CLOSE */
@@ -14,7 +15,9 @@
 /* BODY OPEN */
 
 body {
-  height: 5000px;
+  height: 4000px;
+  background-color: #f89f32;
+  overflow-x: hidden;
 }
 
 nav {
@@ -38,11 +41,11 @@ section {
   background-color: #ee9322;
   position: fixed;
   border-bottom: 0.2rem solid #000;
+  z-index: 1;
 }
 
 .navbar .header h1 {
   font-family: "Kalam", cursive;
-  text-transform: uppercase;
   font-weight: 700;
   font-size: 3rem;
   color: #fff;
@@ -86,6 +89,95 @@ section {
 }
 
 /* NAVBAR CLOSE */
+
+/* LANDING PAGE OPEN */
+
+.landingPage {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10rem;
+  overflow-x: hidden;
+}
+
+.landingPage .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.landingPage .content .details img {
+  width: 450px;
+  animation: UpDown 1s infinite alternate;
+}
+
+.landingPage .content .details h1 {
+  font-family: "Kalam", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.landingPage .content .details p {
+  margin: 0 0 2.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.landingPage .content .details a {
+  padding: 1rem 2rem;
+  background-color: #000;
+  border-radius: 30px;
+  color: #fff;
+  box-shadow: 3px 3px #fff;
+}
+
+.landingPage .content .details a:hover {
+  background-color: #fff;
+  color: #f89f32;
+  box-shadow: 3px 3px #000;
+}
+
+/* LANDING PAGE CLOSE */
+
+/* ABOUT US OPEN */
+
+.about-us {
+  padding-top: 8rem;
+}
+
+.about-us .header {
+  text-align: center;
+}
+
+.about-us .header h1 {
+  text-transform: uppercase;
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.about-us .body {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.about-us .body .details p {
+  width: 500px;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: "Kanit", sans-serif;
+  line-height: 2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* ABOUT US CLOSE */
 
 /* RESPONSIVE */
 
@@ -135,6 +227,36 @@ section {
     display: block;
   }
   /* NAVBAR CLOSE */
+
+  /* LANDING PAGE OPEN */
+
+  .landingPage .content {
+    gap: 3rem;
+  }
+
+  .landingPage .content .details img {
+    width: 350px;
+  }
+
+  /* LANDING PAGE CLOSE */
+
+  /* ABOUT US OPEN */
+
+  .about-us .body {
+    margin-top: 1rem;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .about-us .body .details p {
+    width: 600px;
+  }
+
+  .about-us .body .details img {
+    width: 400px;
+  }
+
+  /* ABOUT US CLOSE */
 }
 /* TABLET MODE CLOSE */
 
@@ -155,5 +277,40 @@ section {
     width: 40vw;
   }
   /* NAVBAR CLOSE */
+
+  /* LANDING PAGE OPEN */
+
+  .landingPage .content {
+    flex-direction: column;
+  }
+
+  /* LANDING PAGE CLOSE */
+
+  /* ABOUT US OPEN */
+
+  .about-us .body .details p {
+    width: 400px;
+  }
+
+  .about-us .body .details img {
+    width: 300px;
+  }
+
+  /* ABOUT US CLOSE */
 }
 /* MOBILE CLOSE */
+
+/* ANIMATION OPEN */
+
+@keyframes UpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ANIMATION CLOSE */
