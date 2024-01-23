@@ -142,15 +142,18 @@ section {
 
 /* ABOUT US OPEN */
 
-.about-us {
+.about-us,
+.menu {
   padding-top: 8rem;
 }
 
-.about-us .header {
+.about-us .header,
+.menu .header {
   text-align: center;
 }
 
-.about-us .header h1 {
+.about-us .header h1,
+.menu .header h1 {
   text-transform: uppercase;
   font-family: "Kalam", cursive;
   font-weight: 700;
@@ -178,6 +181,56 @@ section {
 }
 
 /* ABOUT US CLOSE */
+
+/* MENU OPEN */
+
+.menu .header p {
+  margin-top: 2rem;
+  text-align: justify;
+  line-height: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.menu .body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu .body .details {
+  margin: 2rem;
+  text-align: center;
+}
+
+.menu .body .details img {
+  width: 200px;
+}
+
+.menu .body .details h5 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.menu .body .details p {
+  margin-bottom: 2rem;
+}
+
+.menu .body .details .order-btn {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #d6913c;
+  box-shadow: 3px 3px #000;
+  border-radius: 30px;
+}
+
+.menu .body .details .order-btn:hover {
+  background-color: #000;
+  box-shadow: 3px 3px #fff;
+}
+
+/* MENU CLOSE */
 
 /* RESPONSIVE */
 
