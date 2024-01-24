@@ -14,3 +14,7 @@ document.addEventListener("click", function (e) {
 });
 
 // NAVBAR CLOSE
+
+// MENU OPEN
+
+// MENU CLOSE

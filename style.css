@@ -78,13 +78,18 @@ section {
   transform: scaleX(100%);
 }
 
-.navbar .icon .menu-btn {
-  display: none;
+.navbar .icon .menu-btn,
+.navbar .icon .shopping-cart-btn {
   color: #fff;
   cursor: pointer;
 }
 
-.navbar .icon .menu-btn:hover {
+.navbar .icon .menu-btn {
+  display: none;
+}
+
+.navbar .icon .menu-btn:hover,
+.navbar .icon .shopping-cart-btn:hover {
   color: #000;
 }
 
@@ -124,15 +129,18 @@ section {
   font-size: 1.5rem;
 }
 
-.landingPage .content .details a {
+.landingPage .content .details a,
+.contact-us .body .form .form-footer button {
   padding: 1rem 2rem;
   background-color: #000;
   border-radius: 30px;
   color: #fff;
   box-shadow: 3px 3px #fff;
+  cursor: pointer;
 }
 
-.landingPage .content .details a:hover {
+.landingPage .content .details a:hover,
+.contact-us .body .form .form-footer button:hover {
   background-color: #fff;
   color: #f89f32;
   box-shadow: 3px 3px #000;
@@ -143,21 +151,24 @@ section {
 /* ABOUT US OPEN */
 
 .about-us,
-.menu {
+.menu,
+.contact-us {
   padding-top: 8rem;
 }
 
 .about-us .header,
-.menu .header {
+.menu .header,
+.contact-us .header {
   text-align: center;
 }
 
 .about-us .header h1,
-.menu .header h1 {
+.menu .header h1,
+.contact-us .header h1 {
   text-transform: uppercase;
   font-family: "Kalam", cursive;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #fff;
 }
 
@@ -184,7 +195,8 @@ section {
 
 /* MENU OPEN */
 
-.menu .header p {
+.menu .header p,
+.contact-us .header p {
   margin-top: 2rem;
   text-align: justify;
   line-height: 2rem;
@@ -208,6 +220,10 @@ section {
   width: 200px;
 }
 
+.menu .body .details .order-btn:hover {
+  transform: scale(1.2);
+}
+
 .menu .body .details h5 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
@@ -217,20 +233,77 @@ section {
   margin-bottom: 2rem;
 }
 
-.menu .body .details .order-btn {
+.menu .body .details button {
   padding: 1rem 2rem;
   background-color: #fff;
   color: #d6913c;
-  box-shadow: 3px 3px #000;
+  box-shadow: 5px 5px #000;
   border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.menu .body .details .order-btn:hover {
+.menu .body .details button:hover {
   background-color: #000;
-  box-shadow: 3px 3px #fff;
+  box-shadow: 5px 5px #fff;
+  transform: scale(1.2);
 }
 
 /* MENU CLOSE */
+
+/* CONTACT US OPEN */
+
+.contact-us .body {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-us .body .form {
+  padding: 1rem 3rem;
+  width: 550px;
+  border-radius: 30px;
+}
+
+.contact-us .body .form .form-header {
+  text-align: center;
+}
+
+.contact-us .body .form .form-body .form-input {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us .body .form .form-body .form-input label {
+  margin-bottom: 0.5rem;
+}
+
+.contact-us .body .form .form-body .form-input input {
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid #000;
+}
+
+.contact-us .body .form .form-body .form-input #note {
+  height: 5rem;
+}
+
+.contact-us .body .form .form-footer {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-us .body .location iframe {
+  width: 550px;
+  height: 650px;
+  border-radius: 30px;
+  box-shadow: 5px 5px #ccc;
+}
+
+/* CONTACT US CLOSE */
 
 /* RESPONSIVE */
 
@@ -276,6 +349,12 @@ section {
     transform-origin: 0 0;
   }
 
+  .navbar .icon {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
+
   .navbar .icon .menu-btn {
     display: block;
   }
@@ -310,6 +389,24 @@ section {
   }
 
   /* ABOUT US CLOSE */
+
+  /* CONTACT US OPEN */
+
+  .contact-us .body {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-us .body .form,
+  .contact-us .body .location iframe {
+    width: 450px;
+  }
+
+  .contact-us .body .location iframe {
+    height: 500px;
+  }
+
+  /* CONTACT US CLOSE */
 }
 /* TABLET MODE CLOSE */
 
@@ -350,6 +447,19 @@ section {
   }
 
   /* ABOUT US CLOSE */
+
+  /* CONTACT-US OPEN */
+
+  .contact-us .body .form,
+  .contact-us .body .location iframe {
+    width: 350px;
+  }
+
+  .contact-us .body .location iframe {
+    height: 400px;
+  }
+
+  /* CONTACT-US CLOSE */
 }
 /* MOBILE CLOSE */
 
