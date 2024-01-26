@@ -17,4 +17,22 @@ document.addEventListener("click", function (e) {
 
 // MENU OPEN
 
+let orderBtn = document.querySelector(".menu-order");
+let shoppingCart = document.querySelector(".orderCart");
+let shoppingBtn = document.querySelector(".shopping-cart-btn");
+
+shoppingBtn.addEventListener("click", function () {
+  shoppingCart.classList.toggle("slide-order");
+});
+
+document.addEventListener("click", function (e) {
+  if (!shoppingBtn.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("slide-order");
+  }
+});
+
+orderBtn.addEventListener("click", function () {
+  console.log("beli");
+});
+
 // MENU CLOSE

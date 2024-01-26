@@ -15,7 +15,6 @@
 /* BODY OPEN */
 
 body {
-  height: 4000px;
   background-color: #f89f32;
   overflow-x: hidden;
 }
@@ -78,6 +77,10 @@ section {
   transform: scaleX(100%);
 }
 
+.navbar .icon {
+  position: relative;
+}
+
 .navbar .icon .menu-btn,
 .navbar .icon .shopping-cart-btn {
   color: #fff;
@@ -93,7 +96,76 @@ section {
   color: #000;
 }
 
+.navbar .icon .orderInfo {
+  padding: 0.5rem;
+  display: block;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #fff;
+}
+
 /* NAVBAR CLOSE */
+
+/* ORDER CART OPEN */
+
+.orderCart {
+  width: 20vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 14%;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32rem;
+  background-color: #fff;
+  z-index: 1;
+  border: 0.2rem solid #000;
+  transition: 0.2s ease;
+}
+
+.orderCart.slide-order {
+  left: 0;
+}
+
+.orderCart .header {
+  margin: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.orderCart .body {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.orderCart .body .close,
+.orderCart .body .buy {
+  padding: 2rem 2rem;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.orderCart .body .close {
+  border-right: 0.1rem solid #d6913c;
+}
+
+.orderCart .body .close:hover,
+.orderCart .body .buy:hover {
+  background-color: #d6913c;
+}
+
+/* ORDER CART CLOSE */
 
 /* LANDING PAGE OPEN */
 
@@ -253,6 +325,10 @@ section {
 
 /* CONTACT US OPEN */
 
+.contact-us {
+  margin-bottom: 3rem;
+}
+
 .contact-us .body {
   margin-top: 5rem;
   display: flex;
@@ -304,6 +380,27 @@ section {
 }
 
 /* CONTACT US CLOSE */
+
+/* FOOTER OPEN */
+
+footer {
+  width: 100vw;
+  height: 10vh;
+  padding: 3rem 7%;
+  background-color: #000;
+}
+
+footer .content {
+  text-align: center;
+}
+
+footer .content p {
+  font-family: "Kalam", cursive;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* FOOTER CLOSE */
 
 /* RESPONSIVE */
 
@@ -359,6 +456,15 @@ section {
     display: block;
   }
   /* NAVBAR CLOSE */
+
+  /* SHOPPING CART OPEN */
+
+  .orderCart {
+    width: 40vw;
+    gap: 32.5rem;
+  }
+
+  /* SHOPPING CART CLOSE */
 
   /* LANDING PAGE OPEN */
 
@@ -427,6 +533,16 @@ section {
     width: 40vw;
   }
   /* NAVBAR CLOSE */
+
+  /* SHOPPING CART OPEN */
+
+  .orderCart {
+    width: 45vw;
+    gap: 43rem;
+    top: 11.5%;
+  }
+
+  /* SHOPPING CART CLOSE */
 
   /* LANDING PAGE OPEN */
 
