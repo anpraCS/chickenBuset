@@ -15,9 +15,8 @@ document.addEventListener("click", function (e) {
 
 // NAVBAR CLOSE
 
-// MENU OPEN
+// SHOPPING CART OPEN
 
-let orderBtn = document.querySelector(".menu-order");
 let shoppingCart = document.querySelector(".orderCart");
 let shoppingBtn = document.querySelector(".shopping-cart-btn");
 
@@ -31,8 +30,24 @@ document.addEventListener("click", function (e) {
   }
 });
 
-orderBtn.addEventListener("click", function () {
-  console.log("beli");
+// SHOPPING CART CLOSE
+
+// MENU OPEN
+
+function annoucementFromOrdered(productName, productPrice) {
+  alert(`Anda telah membeli ${productName} seharga Rp. ${productPrice}`);
+}
+
+const buyButtons = document.querySelectorAll(".menu-order");
+
+buyButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const detailProduct = this.closest(".details");
+    const productName = detailProduct.querySelector("h5").innertext;
+    const productPrice = detailProduct.querySelector("p").innerText;
+
+    annoucementFromOrdered(productName, productPrice);
+  });
 });
 
 // MENU CLOSE
